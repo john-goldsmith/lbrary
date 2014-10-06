@@ -14,35 +14,11 @@ get '/' do
     rdio = Rdio.new([ENV["RDIO_CONSUMER_KEY"], ENV["RDIO_CONSUMER_SECRET"]],
                     [access_token, access_token_secret])
 
-    current_user = rdio.call('currentUser')['result']
-    puts current_user.inspect
-    artists = rdio.call("getArtistsInCollection", user: current_user["key"])["result"]
-    # playlists = rdio.call('getPlaylists')['result']['owned']
-
-    response = "
-      <html>
-        <head>
-          <title>Rdio-Simple Example</title>
-        </head>
-        <body>
-          <p>#{current_user['firstName']}'s artists:</p>
-          <ul>"
-            artists.each do |artist|
-              response += "<li>#{artist["name"]}</li>"
-            end
-    response +=
-          '</ul>
-          <a href="/logout">Log out of Rdio</a>
-        </body>
-      </html>'
-    return response
-  else
-    return '
-    <html><head><title>Rdio-Simple Example</title></head><body>
-    <a href="/login">Log into Rdio</a>
-    </body></html>
-    '
+    @current_user = rdio.call('currentUser')['result']
+    @artists = rdio.call("getArtistsInCollection", user: @current_user["key"])["result"]
+    # @playlists = rdio.call('getPlaylists')['result']['owned']
   end
+  erb :index
 end
 
 get '/login' do

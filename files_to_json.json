@@ -18,9 +18,11 @@ Music
 music: [
   {
     name: "Artist 1"
+    rdio_key: "abc123",
     albums: [
       {
         name: "Album 1"
+        rdio_key: "xyz321",
         tracks: [
           "Track 1"
           "Track 2"
@@ -28,6 +30,7 @@ music: [
       },
       {
         name: "Album 2"
+        rdio_key: "456abc",
         tracks: [
           "Track 1"
           "Track 2"

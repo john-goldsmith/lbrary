@@ -1,0 +1,54 @@
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Total Tracks</th>
+        <th>Rdio URL</th>
+        <th>Radio Key</th>
+        <th>Top Songs Key</th>
+        <th>Key</th>
+        <th>Artist Key</th>
+        <!-- <th>Count</th> -->
+        <!-- <th>Album Count</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <% @tracks.each do |track| %>
+        <tr>
+          <td>
+            <img src="<%= track["icon"] %>" height="40" width="40" />
+          </td>
+          <td>
+            <a href="/artists/<%= track["key"] %>"><%= track["name"] %></a>
+          </td>
+          <td>
+            <a href="#"><%= track["length"] %></a>
+          </td>
+          <td>
+            <a href="<%= track["shortUrl"] %>" target="lbrary-artist-short-url">View in Rdio</a>
+          </td>
+          <td>
+            <a href="#"><%= track["radioKey"] %></a>
+          </td>
+          <td>
+            <a href="#"><%= track["topSongsKey"] %></a>
+          </td>
+          <td>
+            <a href="#"><%= track["key"] %></a>
+          </td>
+          <td>
+            <a href="#"><%= track["artistKey"] %></a>
+          </td>
+          <!-- <td>
+            <a href="#"><%#= track["count"] %></a>
+          </td>
+          <td>
+            <a href="#"><%#= track["albumCount"] %></a>
+          </td> -->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

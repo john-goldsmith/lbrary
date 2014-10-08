@@ -38,9 +38,6 @@ end
 #     rdio = Rdio.new([ENV["RDIO_CONSUMER_KEY"], ENV["RDIO_CONSUMER_SECRET"]], [access_token, access_token_secret])
 #     @current_user = rdio.call("currentUser")["result"]
 #     @albums = rdio.call("getAlbumsInCollection", user: @current_user["key"])["result"]
-#     puts "@"*88
-#     puts @tracks.inspect
-#     puts "@"*88
 #     erb :albums
 #   else
 #     redirect :logout
@@ -54,9 +51,6 @@ end
 #     rdio = Rdio.new([ENV["RDIO_CONSUMER_KEY"], ENV["RDIO_CONSUMER_SECRET"]], [access_token, access_token_secret])
 #     @current_user = rdio.call("currentUser")["result"]
 #     @tracks = rdio.call("getTracksInCollection", user: @current_user["key"])["result"]
-#     puts "@"*88
-#     puts @tracks.inspect
-#     puts "@"*88
 #     erb :tracks
 #   else
 #     redirect :logout

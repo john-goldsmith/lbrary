@@ -24,6 +24,9 @@
         <li>
           <a href="/tracks">Tracks</a>
         </li>
+        <li>
+          <a href="/import">Import</a>
+        </li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search" action="/search">
@@ -38,8 +41,8 @@
       </form>
 
       <p class="navbar-right navbar-text">
-        <% if @current_user %>
-          Signed in as <%= @current_user['firstName'] %> <%= @current_user['lastName'] %> (<%= @current_user["key"] %>)
+        <% if logged_in? %>
+          Signed in as <%= current_user["firstName"] %> <%= current_user["lastName"] %> (<%= current_user["key"] %>)
           <a href="/logout" class="navbar-link">Logout</a>
         <% else %>
           <a href="/login" class="navbar-link">Login</a>

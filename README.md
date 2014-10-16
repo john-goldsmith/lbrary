@@ -24,3 +24,8 @@ Implementation of the [Rdio web service API](http://www.rdio.com/developers/docs
 
 ## To-do
 - Lots...
+- Investigate Echo Nest gems:
+  - https://github.com/maxehmookau/echonest-ruby-api
+  - https://github.com/timcase/echowrap
+  - https://github.com/youpy/ruby-echonest
+  - http://echowrap.com

@@ -1,0 +1,34 @@
+[
+  {
+    "action": "update",
+    "item": {
+      "item_id": "",
+      "track_id": "",
+      "song_id": "",
+      "song_name": "",
+      "artist_id": "",
+      "artist_name": "",
+      "release": "",
+      "genre": "",
+      "track_number": 1,
+      "disc_number": 1,
+      "url": "",
+      "favorite": false,
+      "banned": false,
+      "play_count": 0,
+      "skip_count": 0,
+      "rating": 0,
+      "item_keyvalues": {
+        "class" : ["Primary", "Gold", "Deep Track"],
+        "sound" : ["female", "disco", "pop"],
+        "mood" : "upbeat",
+        "rating" : 10,
+        "tempo" : ["fast", "fast"]
+      },
+      "catalog_keyvalues": {
+        "key1" : "value1"
+      }
+
+    }
+  }
+]

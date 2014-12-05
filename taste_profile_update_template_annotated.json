@@ -1,0 +1,162 @@
+[
+  {
+    /*
+     * Action code
+     * One of "delete", "update", "play", or "skip"
+     * Default is "update"
+     */
+    "action": "update",
+
+    "item": {
+
+      /*
+       * Item ID
+       * Any identifier as long as hash (catalog_id+item_id) is unique.
+       * Required
+       * Note that the item_id will be hashed with the taste profile ID
+       * and the taste profile type to create a foreign_id that can be
+       * used in lieu of an Echo Nest ID. The item_id should be restricted
+       * to characters A-Z, a-z, 0-9, ".", "_", and "-".
+       */
+      "item_id": "",
+
+      /*
+       * Track ID
+       * Rosetta ID OR ENID
+       * Optional
+       */
+      "track_id": "",
+
+      /*
+       * Song ID
+       * Rosetta ID OR ENID
+       * Optional
+       */
+      "song_id": "",
+
+      /*
+       * Song name
+       * Optional
+       * song_name, song_id and track_id are mutually exclusive
+       */
+      "song_name": "",
+
+      /*
+       * NOTE: Artist info should not be specified if a song_id or track_id is given
+       */
+
+      /*
+       * Artist ID
+       * Rosetta ID OR ENID
+       * Optional
+       */
+      "artist_id": "",
+
+      /*
+       * Artist name
+       * Optional
+       * artist_name and artist_id are mutually exclusive
+       */
+      "artist_name": "",
+
+      /*
+       * Name of release
+       * Optional
+       */
+      "release": "",
+
+      /*
+       * Name of genre
+       * Optional
+       */
+      "genre": "",
+
+      /*
+       * Track number
+       * Integer
+       * Optional
+       */
+      "track_number": 1,
+
+      /*
+       * Disc number
+       * Integer
+       * Optional
+       */
+      "disc_number": 1,
+
+      /*
+       * URL
+       * String of local filename or remote url
+       * Optional
+       */
+      "url": "",
+
+      /*
+       * Favorite
+       * Boolean
+       * Optional
+       */
+      "favorite": false,
+
+      /*
+       * Boolean
+       * Optional
+       */
+      "banned": false,
+
+      /*
+       * Play count
+       * Integer
+       * Optional
+       */
+      "play_count": 0,
+
+      /*
+       * Skip count
+       * Integer
+       * Optional
+       */
+      "skip_count": 0,
+
+      /*
+       * Rating
+       * Integer (0..10)
+       * Optional
+       */
+      "rating": 0,
+
+      /* Custom item attributes
+       * Each item in a taste profile can associated with a set of custom
+       * attributes. These attributes can be retrieved by the 'item_keyvalues'
+       * bucket of the catalog/read method. Custom attributes are key/value
+       * pairs. Key names can be any ASCII string (limited to 32 chacters).
+       * There can be a maximum of 32 key/values per item. Values can
+       * be strings (up to 64 characters long), ints, or lists of strings.
+       */
+      "item_keyvalues": {
+        "class" : ["Primary", "Gold", "Deep Track"],
+        "sound" : ["female", "disco", "pop"],
+        "mood" : "upbeat",
+        "rating" : 10,
+        "tempo" : ["fast", "fast"] // starts fast, ends fast
+      },
+
+      /* Custom catalog attributes
+       * A taste profile can have an application specific key/value store.
+       * Key names can be any ASCII string (limited to 32 characters).
+       * Key values are strings (utf-8, limited to 64 characters each).
+       * There can be a maximum of 255 keys per taste profile. taste
+       * profile methods that return lists of taste profiles (such as
+       * catalog/similar) can be constrained to return only taste profiles
+       * that match a given set of key/value pairs.
+       */
+      "catalog_keyvalues": {
+        "key1" : "value1",
+        "key2" : "value2",
+        "key3" : "3"
+      }
+
+    }
+  }
+]

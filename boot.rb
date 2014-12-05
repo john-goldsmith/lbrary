@@ -1,3 +1,6 @@
+require "dotenv"
+Dotenv.load
+
 require "rack"
 require "rack/contrib"
 require "rubygems"
@@ -17,9 +20,15 @@ require "sidekiq"
 require "sidekiq/web"
 # require "sinatra/strong_params"
 require "./config/environments"
-
+require "echowrap"
 require "./lib/oauth_mini"
 require "./lib/rdio"
+
+Echowrap.configure do |config|
+  config.api_key = "GLMPW8WB7YDLEQTUD"
+  config.consumer_key = "be783422a3b12517bb67bb824a89347f"
+  config.shared_secret = "FdMQzSrPT/af1yHsvYp6pA"
+end
 
 module Lbrary
   APP_ROOT = File.dirname(__FILE__)

@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.1.2"
 
+gem "bundler"
 gem "pg"
 gem "activerecord"
 gem "activesupport"
@@ -21,6 +22,7 @@ gem "dotenv"
 gem "rake"
 gem "json", '~> 1.7.7'
 gem "sidekiq"
+gem "echowrap"
 
 # See https://github.com/rack/rack-contrib/pull/22 (merged, but not
 # released to RubyGems)

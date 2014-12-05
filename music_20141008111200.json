@@ -10,5 +10,17 @@
         ]
       }
     ]
+  },
+  {
+    "artist": "Artist 2",
+    "albums": [
+      {
+        "name": "Album 2",
+        "tracks": [
+          "Track 3",
+          "Track 4"
+        ]
+      }
+    ]
   }
 ]

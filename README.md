@@ -15,11 +15,12 @@ Implementation of the [Rdio web service API](http://www.rdio.com/developers/docs
   - `ECHO_NEST_CONSUMER_SECRET`
 - Set the values of the above keys to the ones found in your [Echo Nest developer account](https://developer.echonest.com/account/profile)  (or create one if needed)
 
-### Gems
+### Setup
 - Run `bundle install`
+- Run `bundle exec rake db:create`
 
 ## Running
-- Run `bundle exec rerun ruby boot.rb`
+- Run `bundle exec rerun ruby boot.rb` or `bundle exec rerun rackup config.ru`
 - In your browser, navigate to [http://localhost:4567](http://localhost:4567)
 
 ## To-do

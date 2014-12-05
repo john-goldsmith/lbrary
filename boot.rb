@@ -1,9 +1,37 @@
-require "dotenv"
-Dotenv.load
-
+require "rack"
+require "rack/contrib"
+require "rubygems"
+require "bundler"
+require "json"
+require "active_record"
+require "active_model_serializers"
+require "active_support"
+require "protected_attributes"
 require "sinatra"
+require "sinatra/activerecord"
+require "sinatra/config_file"
+require "sinatra/json"
+require "sinatra/respond_with"
+require "sinatra-initializers"
+require "sidekiq"
+require "sidekiq/web"
+# require "sinatra/strong_params"
+require "./config/environments"
+
 require "./lib/oauth_mini"
 require "./lib/rdio"
+
+module Lbrary
+  APP_ROOT = File.dirname(__FILE__)
+  CONFIG = YAML.load_file(File.join(APP_ROOT, "config", "config.yml"))
+  # RACK_ENV = ENV["RACK_ENV"] || "development"
+  # DB_CONFIG = YAML.load_file(File.join(APP_ROOT, "config", "database.yml"))
+end
+
+# Dir[Lbrary::APP_ROOT + "/config/initializers/*.rb"].each { |initializer| require initializer }
+Dir[Lbrary::APP_ROOT + "/lib/models/*.rb"].each { |model| require model }
+Dir[Lbrary::APP_ROOT + "/lib/controllers/*.rb"].each { |controller| require controller }
+Dir[Lbrary::APP_ROOT + "/lib/workers/*.rb"].each { |worker| require worker }
 
 enable :sessions
 set :session_secret, "9786c91f98c44f17be6dfa8e6aa0a936"

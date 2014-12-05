@@ -1,0 +1,17 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: lbrary
+  pool: 5
+  username: postgres
+  password:
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: lbrary_test
+  pool: 5
+  username: postgres
+  password:

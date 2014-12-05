@@ -1,0 +1,1 @@
+Dir[File.join('db', 'seeds', '*.rb')].sort.each { |seed| load seed }

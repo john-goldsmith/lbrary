@@ -1,6 +1,14 @@
-class LibraryContent < ActiveRecord::Base
+module Lbrary
 
-  belongs_to :library
-  belongs_to :artist
+  module Models
+
+    class LibraryContent < ActiveRecord::Base
+
+      belongs_to :library
+      belongs_to :artist
+
+    end
+
+  end
 
 end

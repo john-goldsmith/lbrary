@@ -1,0 +1,3 @@
+# See http://developer.echonest.com/docs/v4/index.html#rate-limits
+rate_limit:
+  limit: 20 # per minute

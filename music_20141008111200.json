@@ -1,25 +1,10 @@
 [
   {
-    "artist": "Artist 1",
+    "artist": "U2",
     "albums": [
       {
-        "name": "Album 1",
-        "tracks": [
-          "Track 1",
-          "Track 2"
-        ]
-      }
-    ]
-  },
-  {
-    "artist": "Artist 2",
-    "albums": [
-      {
-        "name": "Album 2",
-        "tracks": [
-          "Track 3",
-          "Track 4"
-        ]
+        "name": "",
+        "tracks": []
       }
     ]
   }

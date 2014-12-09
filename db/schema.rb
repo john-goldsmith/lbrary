@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "artists", force: true do |t|
     t.string   "name"
     t.string   "slug"
+    t.string   "echonest_id"
+    t.string   "rdio_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,6 +52,7 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "tracks", force: true do |t|
     t.string   "name"
     t.string   "slug"
+    t.string   "echonest_id"
     t.integer  "length"
     t.integer  "album_id"
     t.datetime "created_at"

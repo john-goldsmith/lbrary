@@ -1,5 +1,14 @@
-class ApplicationWorker
+module Lbrary
 
-  include Sidekiq::Worker
+  module Workers
+
+    class ApplicationWorker
+
+      include Sidekiq::Worker
+      include Lbrary::Models
+
+    end
+
+  end
 
 end

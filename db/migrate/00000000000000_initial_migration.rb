@@ -23,6 +23,8 @@ class InitialMigration < ActiveRecord::Migration
     create_table :artists do |t|
       t.string :name
       t.string :slug
+      t.string :echonest_id
+      t.string :rdio_id
       t.timestamps
     end
 
@@ -37,6 +39,7 @@ class InitialMigration < ActiveRecord::Migration
     create_table :tracks do |t|
       t.string :name
       t.string :slug
+      t.string :echonest_id
       t.integer :length
       t.references :album
       t.timestamps

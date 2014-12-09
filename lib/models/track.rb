@@ -1,6 +1,14 @@
-class Track < ActiveRecord::Base
+module Lbrary
 
-  belongs_to :album
-  has_one :artist, through: :album
+  module Models
+
+    class Track < ActiveRecord::Base
+
+      belongs_to :album
+      has_one :artist, through: :album
+
+    end
+
+  end
 
 end

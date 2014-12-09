@@ -1,6 +1,14 @@
-class Album < ActiveRecord::Base
+module Lbrary
 
-  belongs_to :artist
-  has_many :tracks
+  module Models
+
+    class Album < ActiveRecord::Base
+
+      belongs_to :artist
+      has_many :tracks
+
+    end
+
+  end
 
 end

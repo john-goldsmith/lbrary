@@ -1,7 +1,6 @@
 require './boot'
 
 run Rack::URLMap.new({
-  # "/api/v1/users"       => Lbrary::Api::V1::UsersController
-  "/" => Sinatra::Application,
+  "/" => Lbrary::Controllers::ApplicationController,
   "/sidekiq" => Sidekiq::Web
 })

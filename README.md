@@ -31,8 +31,8 @@ Implementation of the [Rdio web service API](http://www.rdio.com/developers/docs
 - Run `redis-client` to start Redis
 
 ## Running locally
-- Run `bundle exec rerun ruby boot.rb` or `bundle exec rerun rackup config.ru`
-- Run `bundle exec sidekiq -r ./boot.rb` to start Sidekiq
+- To start the app, run `bundle exec rerun ruby boot.rb` or `bundle exec rerun rackup config.ru`
+- To start Sidekiq, run `bundle exec sidekiq -r ./boot.rb` to start Sidekiq
 - In your browser, navigate to [http://localhost:4567](http://localhost:4567)
 
 ## To-do

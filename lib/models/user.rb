@@ -1,5 +1,13 @@
-class User < ActiveRecord::Base
+module Lbrary
 
-  has_many :libraries
+  module Models
+
+    class User < ActiveRecord::Base
+
+      has_many :libraries
+
+    end
+
+  end
 
 end

@@ -35,9 +35,8 @@ Implementation of the [Rdio web service API](http://www.rdio.com/developers/docs
 - To start Sidekiq, run `bundle exec sidekiq -r ./boot.rb` to start Sidekiq
 - In your browser, navigate to [http://localhost:4567](http://localhost:4567)
 
+## Resources
+- [Echo Nest API](http://developer.echonest.com/docs/v4/index.html)
+- [Echowrap API](https://github.com/timcase/echowrap/wiki)
+
 ## To-do
-- Investigate Echo Nest gems:
-  - https://github.com/maxehmookau/echonest-ruby-api
-  - https://github.com/timcase/echowrap
-  - https://github.com/youpy/ruby-echonest
-  - http://echowrap.com

@@ -40,3 +40,4 @@ Implementation of the [Rdio web service API](http://www.rdio.com/developers/docs
 - [Echowrap API](https://github.com/timcase/echowrap/wiki)
 
 ## To-do
+- [Create recrusive directory tree](http://stackoverflow.com/questions/5520501/ruby-create-recursive-directory-tree)
